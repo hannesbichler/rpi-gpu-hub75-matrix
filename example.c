@@ -35,7 +35,7 @@ void* render_cpu(void *arg) {
     uint8_t *img = malloc(scene->width * scene->height * scene->stride);
     memset(img, 0, scene->width * scene->height * scene->stride);
 
-    debug("rendering on CPU\n");
+    //debug("rendering on CPU\n");
     // need to pause a second for gpio to be setup
     usleep(50000);
     for(;;) {

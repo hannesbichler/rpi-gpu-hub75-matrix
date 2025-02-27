@@ -1385,7 +1385,7 @@ void map_byte_image_to_bcm(scene_info *scene, uint8_t *image) {
     ASSERT(scene->panel_height % 16 == 0);
     ASSERT(scene->panel_width % 16 == 0);
     // pwm_stride is the row length in bytes of the pwm output data
-    //uint32_t pwm_stride __attribute__((aligned(BIT_DEPTH_ALIGNMENT))) = scene->width * scene->bit_depth;
+    uint32_t pwm_stride __attribute__((aligned(BIT_DEPTH_ALIGNMENT))) = scene->width * scene->bit_depth;
     // const uint32_t pwm_stride = scene->width * scene->bit_depth;
     // half_height is 1/2 the panel height. since we clock in 2 pixels at a time, 
     // we only need to process half the rows

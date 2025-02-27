@@ -17,11 +17,11 @@
 //#define CONSOLE_DEBUG 1
 
 #include <pthread.h>
-#include <rpihub75/rpihub75.h>
-#include <rpihub75/util.h>
-#include <rpihub75/gpu.h>
-#include <rpihub75/video.h>
-#include <rpihub75/pixels.h>
+#include <include/rpihub75.h>
+#include <include/util.h>
+#include <include/gpu.h>
+#include <include/video.h>
+#include <include/pixels.h>
 
 unsigned int ri(unsigned int max) {
 	return rand() % max;

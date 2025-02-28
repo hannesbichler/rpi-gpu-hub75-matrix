@@ -38,7 +38,7 @@ void* render_cpu(void *arg) {
     debug("rendering on CPU\n");
     // need to pause a second for gpio to be setup
     usleep(50000);
-    //for(;;) 
+    for(int i = 0; i < 208; i++) 
 	{
         // darken every pixel in the image for each byte of R,G,B data
         if (1) {
@@ -63,7 +63,7 @@ void* render_cpu(void *arg) {
         //hub_triangle_aa(scene, x1, y1, x2, y2, x3, y3, color);
 
         // draw a line
-        hub_line(scene, 0, 0, 0, 52, color);
+        hub_line(scene, x, 0, x, 52, color);
 	//	hub_line(scene, x1, y1, x2, y2, color);
 
         // draw a rectangle

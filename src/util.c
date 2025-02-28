@@ -272,8 +272,7 @@ long calculate_fps(const uint16_t target_fps, const bool show_fps) {
     sleep_time = target_frame_time_us - frame_time;
 
     if (sleep_time > 10 && sleep_time < 1000000L) {
-//        usleep(sleep_time);
-		usleep(2);
+        usleep(sleep_time);
     }
 
     frame_count++;

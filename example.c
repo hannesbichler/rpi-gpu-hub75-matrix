@@ -56,12 +56,14 @@ void* render_cpu(void *arg) {
         uint16_t y3 = ri(scene->height);
 
         // generate a random color
-        RGB color = {ri(250), ri(250), ri(250)};
+     //   RGB color = {ri(250), ri(250), ri(250)};
+		RGB color = {255, 255, 255};
 
         //hub_triangle_aa(scene, x1, y1, x2, y2, x3, y3, color);
 
         // draw a line
         hub_line(scene, x1, y1, x2, y2, color);
+	//	hub_line(scene, x1, y1, x2, y2, color);
 
         // draw a rectangle
         //hub_fill(scene, x1, y1, x2, y2, color);

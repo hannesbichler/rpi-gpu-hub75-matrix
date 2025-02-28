@@ -38,7 +38,8 @@ void* render_cpu(void *arg) {
     debug("rendering on CPU\n");
     // need to pause a second for gpio to be setup
     usleep(50000);
-    for(;;) {
+    //for(;;) 
+	{
         // darken every pixel in the image for each byte of R,G,B data
         if (1) {
             for (int i=0; i<scene->height*scene->width*scene->stride; i++) {

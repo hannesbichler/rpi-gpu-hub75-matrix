@@ -80,7 +80,7 @@ $(LIB_GPU): $(OBJ_COMMON) $(OBJ_GPU) | $(BUILDDIR)
 
 # New example target to compile example.c
 example: example.c $(LIB_GPU)
-	$(CC) example.c -Wall -O3 -ffast-math -lrpihub75_gpu -o example
+	$(CC) example.c -Wall -O3 -ffast-math -mtune=native -lrpihub75_gpu -o example
 
 
 # Install target

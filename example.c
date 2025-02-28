@@ -64,6 +64,8 @@ void* render_cpu(void *arg) {
 
         // draw a line
         hub_line(scene, i, 0, i, 52, color);
+		if(i > 0)
+			hub_line(scene, i-1, 0, i-1, 52, RGB{0,0,0});
 	//	hub_line(scene, x1, y1, x2, y2, color);
 
         // draw a rectangle

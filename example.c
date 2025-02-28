@@ -59,13 +59,15 @@ void* render_cpu(void *arg) {
         // generate a random color
      //   RGB color = {ri(250), ri(250), ri(250)};
 		RGB color = {255, 255, 255};
+		RGB black = {0, 0, 0};
 
         //hub_triangle_aa(scene, x1, y1, x2, y2, x3, y3, color);
 
         // draw a line
-        hub_line(scene, i, 0, i, 52, color);
 		if(i > 0)
-			hub_line(scene, i-1, 0, i-1, 52, RGB(0,0,0));
+			hub_line(scene, i-1, 0, i-1, 52, black);
+        hub_line(scene, i, 0, i, 52, color);
+		
 	//	hub_line(scene, x1, y1, x2, y2, color);
 
         // draw a rectangle
